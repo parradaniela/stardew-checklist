@@ -1,0 +1,46 @@
+1. Vanilla Stardew 
+    Should probably use the Foraging page on the wiki as it captures everything
+        - https://stardewvalleywiki.com/Foraging
+    Considerations
+        - Items on the beach, ginger island, mines and beach are grouped separately from the seasons
+        - Many vanilla foraging items will also appear in modded areas - is there an easy way to check this? 
+
+    Ideas for targeting the things grouped by season 
+    Can try conditional statement like
+        Grab a table and its previous sibling h3. If it's not already in there, push the innerText of the h3 into the seasons array
+
+    For beach
+        - There is a "season found" column already, either push anything not already in the array, or if it says 'All' then do the check and push all 4/whichever ones are not already there
+
+    For the mines, desert and ginger island
+        - If item already exists in collection
+            - if the mines not already in locations array
+                - Push "The mines" location into the array
+        - If item doesn't exist, create a whole new item etc
+        - Insert all four seasons
+
+
+2. Stardew Valley Expanded
+    Forage page has links to individual forage items 
+        - "https://stardew-valley-expanded.fandom.com/wiki/Forage" 
+
+    Scraper will need to navigate to this page, collect all the links, then visit them one by one to scrape 
+        - On the individual pages, we can grab 
+            - h1 for the Name
+            - Next sibling to the h3s that have 'Season' and 'Source' in their innertext 
+
+    Consideration for updating vanilla item locations could be to scrape the foraging section from each location's page
+        - Ex Secret woods: https://stardew-valley-expanded.fandom.com/wiki/Secret_Woods_(SVE)
+
+3. RidgeSide Village
+    Wiki page has a foraging page woohoo!
+        - https://ridgeside.fandom.com/wiki/Foraging
+    Similar to vanilla, we'll have to do some DOM node shenanigans to access previous sibling h2s to assign a season to the items in the tables
+    The new locations have a foraging section as well that would list vanilla items
+        - https://ridgeside.fandom.com/wiki/Ridgeside_Village
+
+4. East Scarp
+    Doesn't appear to have new foreageables so it's not relevant for the MVP 
+        - It does have a unique fish list, so could be a consideration for stretch goal
+    The locations on the wiki don't include forage lists for vanilla items so that could be a roadblock if this mod gets added later on to the app
+        - Maybe I can ask the mod creator directly for a list if they have it, or I can try to dig through the mod files to see if item lists are easy to navigate

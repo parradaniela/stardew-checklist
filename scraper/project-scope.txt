@@ -1,0 +1,34 @@
+MVP 
+An app that allows the user to view a list of forageable items from vanilla SDV, as well as SDV Expanded, and RidgeSide Village
+User should be able to filter by season, have a different view for each mod/vanilla, and have an option to view allows
+The forageable items should have this information
+    - Name - string
+    - Image url - string
+    - Locations - array of strings
+    - season - array of strings
+    - Available year 1 - true/false
+        - May need to check if any items in RSV or ES appear only in year 3 or later
+
+To get the information, I'll need to build a web scraper using Puppeteer targeting the wikis for vanilla/the mods
+I may need to manually download and store the images (can Puppeteer help with downloading at least?)
+
+Stretch goals
+- Option for user to add individual items to a personal list 
+    - Will need to decide if this should be part of a login option so data can persist 
+    - Or allow the user to download a .txt or .csv version of the list (this is probably easier/faster)
+- Expand the app to also include fishing
+- Maybe also expand to include crops
+- Connect the scraper to a protected page on the site so that I can run it from the app itself
+- Option to expand into adding other large mods as well 
+
+Tech stack
+- Puppeteer
+- Node/Express
+- MongoDB
+- React
+- TypeScript
+- Tailwind? Component libraries? 
+
+Deployment
+- Netlify for front end
+- Render for back end ?
