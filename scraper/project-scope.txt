@@ -4,6 +4,7 @@ User should be able to filter by season, have a different view for each mod/vani
 The forageable items should have this information
     - Name - string
     - Image url - string
+    - Wiki url - string
     - Locations - array of strings
     - season - array of strings
     - Available year 1 - true/false
