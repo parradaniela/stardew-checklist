@@ -179,7 +179,9 @@
     "name": "Fiddlehead Fern",
     "imgUrl": "/mediawiki/images/4/48/Fiddlehead_Fern.png",
     "wikiUrl": "https://stardewvalleywiki.com/Fiddlehead_Fern",
-    "locations": [],
+    "locations": [
+      "Secret Woods (78%)"
+    ],
     "seasons": [
       "summer"
     ],
@@ -308,7 +310,9 @@
     "name": "Winter Root",
     "imgUrl": "/mediawiki/images/1/11/Winter_Root.png",
     "wikiUrl": "https://stardewvalleywiki.com/Winter_Root",
-    "locations": [],
+    "locations": [
+      "Tilling soil throughout Stardew Valley"
+    ],
     "seasons": [
       "winter"
     ],
@@ -335,7 +339,9 @@
     "name": "Snow Yam",
     "imgUrl": "/mediawiki/images/3/3f/Snow_Yam.png",
     "wikiUrl": "https://stardewvalleywiki.com/Snow_Yam",
-    "locations": [],
+    "locations": [
+      "Tilling soil throughout Stardew Valley"
+    ],
     "seasons": [
       "winter"
     ],

@@ -30,8 +30,14 @@ const getSeasonTableData = async (page, season) => {
 			const anchorElement = tr.querySelector('td:nth-child(2) a');
 			return anchorElement.getAttribute('href');
 		});
-		const itemLocations = await row.$$eval('td ul li', locations => {
-			return locations.map(location => location.textContent);
+		const itemLocations = await row.$eval('td:nth-child(4)', td => {
+			const ulElement = td.querySelector('ul');
+			if (ulElement) {
+				const lis = Array.from(ulElement.querySelectorAll('li'));
+				return lis.map(li => li.textContent);
+			} else {
+				return [td.innerText];
+			}
 		});
 		forageObj.name = itemName;
 		forageObj.imgUrl = imgSrc;
