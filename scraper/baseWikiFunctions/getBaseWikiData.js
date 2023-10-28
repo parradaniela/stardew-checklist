@@ -1,44 +1,52 @@
 const getBaseWikiData = async (page, season) => {
-	const tableSelector = `h3:has(span#${season}) + table tbody`;
-	let forageObj = {
-		name: '',
-		imgUrl: '',
-		wikiUrl: '',
-		locations: [],
-		seasons: [],
-		yearOneAvail: true,
-	};
+	const forageArray = [];
+	const seasonSpan = await page.$(`span#${season}`);
+	// using ElementHandle.$x() with the XPath '..' to select the parent element
+	const h3Parent = (seasonSpan && (await seasonSpan.$x('..')))[0];
+	const seasonTable =
+		h3Parent && (await h3Parent.$x('following-sibling::table[1]'))[0];
+	// Filter table rows to exclude nested trs
+	const seasonTableRows =
+		(seasonTable && (await seasonTable.$$(`tbody > tr:not(:is(tr tr))`))) || [];
+	// Loop through the rows for data
+	for (const row of seasonTableRows) {
+		let forageObj = {
+			name: '',
+			imgUrl: '',
+			wikiUrl: '',
+			locations: [],
+			seasons: [],
+			yearOneAvail: true,
+		};
 
-	const itemImg = await page.$(`${tableSelector} tr:first-child img`);
-	if (itemImg) {
-		const srcHandle = await itemImg.getProperty('src');
-		forageObj.imgUrl = await srcHandle.jsonValue();
-	} else {
-		console.log('Image not found');
-	}
+		const itemName = await row.evaluate(tr => {
+			const anchorElement = tr.querySelector('td:nth-child(2) a');
+			return anchorElement.innerText;
+		});
+		const wikiUrl = await row.evaluate(tr => {
+			const anchorElement = tr.querySelector('td:nth-child(2) a');
+			return anchorElement.getAttribute('href');
+		});
 
-	const itemNameAnchor = await page.$(`${tableSelector} tr td:nth-child(2) a`);
-	if (itemNameAnchor) {
-		const wikiHref = await itemNameAnchor.getProperty('href');
-		forageObj.wikiUrl = await wikiHref.jsonValue();
-		forageObj.name = await itemNameAnchor.evaluate(node => node.innerText);
-	} else {
-		console.log('Item Name Anchor not found');
-	}
+		const imgSrc = await row.evaluate(tr => {
+			const imgElement = tr.querySelector('img');
+			return imgElement ? imgElement.getAttribute('src') : null;
+		});
 
-	const itemLocations = await page.$$eval(
-		`${tableSelector} tr:first-child ul li`,
-		locations => {
+		const itemLocations = await row.$$eval('td ul li', locations => {
 			return locations.map(location => location.textContent);
-		}
-	);
-	forageObj.locations = forageObj.locations.concat(itemLocations);
+		});
 
-	if (forageObj.seasons.indexOf(season.toLowerCase()) === -1) {
-		forageObj.seasons.push(season.toLowerCase());
+		forageObj.name = itemName;
+		forageObj.imgUrl = imgSrc;
+		forageObj.wikiUrl = `https://stardewvalleywiki.com${wikiUrl}`;
+		forageObj.locations = forageObj.locations.concat(itemLocations);
+		if (forageObj.seasons.indexOf(season.toLowerCase()) === -1) {
+			forageObj.seasons.push(season.toLowerCase());
+		}
+		forageArray.push(forageObj);
 	}
-	console.log(forageObj);
-	return forageObj;
+	return forageArray;
 };
 
 module.exports = getBaseWikiData;
