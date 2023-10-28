@@ -18,25 +18,21 @@ const getSeasonTableData = async (page, season) => {
 			seasons: [],
 			yearOneAvail: true,
 		};
-
 		const itemName = await row.evaluate(tr => {
 			const anchorElement = tr.querySelector('td:nth-child(2) a');
 			return anchorElement.innerText;
+		});
+		const imgSrc = await row.evaluate(tr => {
+			const imgElement = tr.querySelector('img');
+			return imgElement ? imgElement.getAttribute('src') : null;
 		});
 		const wikiUrl = await row.evaluate(tr => {
 			const anchorElement = tr.querySelector('td:nth-child(2) a');
 			return anchorElement.getAttribute('href');
 		});
-
-		const imgSrc = await row.evaluate(tr => {
-			const imgElement = tr.querySelector('img');
-			return imgElement ? imgElement.getAttribute('src') : null;
-		});
-
 		const itemLocations = await row.$$eval('td ul li', locations => {
 			return locations.map(location => location.textContent);
 		});
-
 		forageObj.name = itemName;
 		forageObj.imgUrl = imgSrc;
 		forageObj.wikiUrl = `https://stardewvalleywiki.com${wikiUrl}`;
