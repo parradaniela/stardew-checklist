@@ -1,4 +1,4 @@
-const getBaseWikiData = async (page, season) => {
+const getSeasonTableData = async (page, season) => {
 	const forageArray = [];
 	const seasonSpan = await page.$(`span#${season}`);
 	// using ElementHandle.$x() with the XPath '..' to select the parent element
@@ -49,4 +49,4 @@ const getBaseWikiData = async (page, season) => {
 	return forageArray;
 };
 
-module.exports = getBaseWikiData;
+module.exports = getSeasonTableData;
