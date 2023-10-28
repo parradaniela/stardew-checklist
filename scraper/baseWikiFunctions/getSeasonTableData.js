@@ -24,7 +24,7 @@ const getSeasonTableData = async (page, season) => {
 		});
 		const imgSrc = await row.evaluate(tr => {
 			const imgElement = tr.querySelector('img');
-			return imgElement ? imgElement.getAttribute('src') : null;
+			return imgElement.getAttribute('src');
 		});
 		const wikiUrl = await row.evaluate(tr => {
 			const anchorElement = tr.querySelector('td:nth-child(2) a');
