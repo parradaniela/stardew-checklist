@@ -26,7 +26,7 @@ const runScraper = async () => {
 		console.log(`${id} table added to allForage.json`);
 	}
 	// The arguments "null" and "2" are for formatting the JSON output
-	await fs.writeFile('test.json', JSON.stringify(allForage, null, 2));
+	await fs.writeFile('allForage.json', JSON.stringify(allForage, null, 2));
 	console.log('Scrape complete');
 	await browser.close();
 };
