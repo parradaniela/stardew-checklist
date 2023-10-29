@@ -1,15 +1,16 @@
-const getSeasonTableData = async (page, season) => {
+const getLocationTableData = async (page, location) => {
 	const forageArray = [];
-	const seasonSpan = await page.$(`span#${season}`);
+	const locationSpan = await page.$(`span#${location}`);
 	// using ElementHandle.$x() with the XPath '..' to select the parent element
-	const h3Parent = (seasonSpan && (await seasonSpan.$x('..')))[0];
-	const seasonTable =
+	const h3Parent = (locationSpan && (await locationSpan.$x('..')))[0];
+	const locationTable =
 		h3Parent && (await h3Parent.$x('following-sibling::table[1]'))[0];
 	// Filter table rows to exclude nested trs
-	const seasonTableRows =
-		(seasonTable && (await seasonTable.$$(`tbody > tr:not(:is(tr tr))`))) || [];
+	const locationTableRows =
+		(locationTable && (await locationTable.$$(`tbody > tr:not(:is(tr tr))`))) ||
+		[];
 	// Loop through the rows for data
-	for (const row of seasonTableRows) {
+	for (const row of locationTableRows) {
 		let forageObj = {
 			name: '',
 			imgUrl: '',
@@ -18,6 +19,7 @@ const getSeasonTableData = async (page, season) => {
 			seasons: [],
 			yearOneAvail: true,
 		};
+
 		const itemName = await row.evaluate(tr => {
 			const anchorElement = tr.querySelector('td:nth-child(2) a');
 			return anchorElement.innerText;
@@ -30,25 +32,24 @@ const getSeasonTableData = async (page, season) => {
 			const anchorElement = tr.querySelector('td:nth-child(2) a');
 			return anchorElement.getAttribute('href');
 		});
-		const itemLocations = await row.$eval('td:nth-child(4)', td => {
-			const ulElement = td.querySelector('ul');
-			if (ulElement) {
-				const lis = Array.from(ulElement.querySelectorAll('li'));
-				return lis.map(li => li.textContent);
-			} else {
-				return [td.innerText];
-			}
+
+		const itemLocation = location.replace('_', ' ');
+
+		const itemSeasons = await row.evaluate(tr => {
+			const season = tr.querySelector('td:nth-child(4)');
+			const seasonText = season.innerText.replace(/\u00A0/g, '');
+			if (seasonText === 'All') return ['Spring', 'Summer', 'Fall', 'Winter'];
+			return seasonText;
 		});
+
 		forageObj.name = itemName;
 		forageObj.imgUrl = imgSrc;
 		forageObj.wikiUrl = `https://stardewvalleywiki.com${wikiUrl}`;
-		forageObj.locations = forageObj.locations.concat(itemLocations);
-		if (forageObj.seasons.indexOf(season) === -1) {
-			forageObj.seasons.push(season);
-		}
+		forageObj.locations = forageObj.locations.concat(itemLocation);
+		forageObj.seasons = forageObj.seasons.concat(itemSeasons);
 		forageArray.push(forageObj);
 	}
 	return forageArray;
 };
 
-module.exports = getSeasonTableData;
+module.exports = getLocationTableData;
