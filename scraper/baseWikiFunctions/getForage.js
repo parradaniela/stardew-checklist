@@ -12,14 +12,14 @@ const getForage = async (row, tableID) => {
 		yearOneAvail: true,
 	};
 
-	const nameAndUrl = await parseNameAnchor(row);
+	const { name, url } = await parseNameAnchor(row);
 	const imgSrc = await parseImageSrc(row);
 	const itemLocations = await parseLocations(row, tableID);
 	const itemSeasons = await parseSeasons(row, tableID);
 
-	forageObj.name = nameAndUrl.name;
+	forageObj.name = name;
 	forageObj.imgUrl = imgSrc;
-	forageObj.wikiUrl = `https://stardewvalleywiki.com${nameAndUrl.url}`;
+	forageObj.wikiUrl = `https://stardewvalleywiki.com${url}`;
 	forageObj.locations = forageObj.locations.concat(itemLocations);
 	forageObj.seasons = forageObj.seasons.concat(itemSeasons);
 	return forageObj;
