@@ -17,7 +17,7 @@ const parseSeasons = async (row, tableID) => {
 		} else {
 			// The Beach
 			const fourthColumnText = await row.$eval('td:nth-child(4)', td => {
-				return (cleansedText = td.innerText.replace(/\u00A0/g, ''));
+				return td.innerText.replace(/\u00A0/g, '');
 			});
 			seasons = fourthColumnText;
 		}
