@@ -1,0 +1,25 @@
+{
+	"name": "backend",
+	"version": "1.0.0",
+	"description": "Back end for stardew checklist application",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js",
+		"dev": "node --watch server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/parradaniela/stardew-checklist"
+	},
+	"author": "Daniela Parra",
+	"license": "ISC",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^16.3.1",
+		"express": "^4.18.2",
+		"express-async-handler": "^1.2.0",
+		"mongodb": "^6.2.0",
+		"mongoose": "^7.6.4",
+		"mongoose-sequence": "^5.3.1"
+	}
+}

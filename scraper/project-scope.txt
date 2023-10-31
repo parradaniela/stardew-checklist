@@ -9,6 +9,7 @@ The forageable items should have this information
     - season - array of strings
     - Available year 1 - true/false
         - May need to check if any items in RSV or ES appear only in year 3 or later
+    - game - base, SVE, RSV or ES
 
 To get the information, I'll need to build a web scraper using Puppeteer targeting the wikis for vanilla/the mods
 I may need to manually download and store the images (can Puppeteer help with downloading at least?)

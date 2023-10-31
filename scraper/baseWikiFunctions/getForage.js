@@ -10,6 +10,7 @@ const getForage = async (row, tableID) => {
 		locations: [],
 		seasons: [],
 		yearOneAvail: true,
+		game: 'base',
 	};
 
 	const { name, url } = await parseNameAnchor(row);
