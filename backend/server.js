@@ -17,7 +17,7 @@ app.use(express.json());
 //Can create a public folder to add css if wanted
 app.use('/', express.static(path.join(__dirname, '/public')));
 app.use('/', require('./routes/root'));
-app.use('/Forage', require('./routes/forageRoutes'));
+app.use('/forage', require('./routes/forageRoutes'));
 
 app.all('*', (req, res) => {
 	res.status(404);

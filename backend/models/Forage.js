@@ -10,4 +10,4 @@ const forageSchema = new mongoose.Schema({
 	game: String,
 });
 
-module.exports = mongoose.model('Forage', forageSchema);
+module.exports = mongoose.model('Forage', forageSchema, 'forage');
