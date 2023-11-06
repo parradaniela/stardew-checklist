@@ -1,11 +1,11 @@
 import { RouterProvider } from "react-router";
 import { router } from "./router/Router";
 const App = () => {
-    return (
-        <>
-            <RouterProvider router={router} />
-        </>
-    );
+  return (
+    <div className=" bg-black text-white">
+      <RouterProvider router={router} />
+    </div>
+  );
 };
 
 export default App;

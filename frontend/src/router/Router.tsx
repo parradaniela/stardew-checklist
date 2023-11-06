@@ -5,13 +5,13 @@ import {
 } from "react-router-dom";
 // Page imports
 import RootLayout from "../layout/RootLayout";
-import Landing from "../pages/Landing";
 import About from "../pages/About";
+import ForageCatalogue from "../pages/ForageCatalogue/ForageCatalogue";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<RootLayout />}>
-            <Route index element={<Landing />} />
+            <Route index element={<ForageCatalogue />} />
             <Route path="about" element={<About />} />
         </Route>,
     ),
