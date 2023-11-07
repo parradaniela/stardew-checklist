@@ -1,13 +1,13 @@
 import GameForm from "./components/GameForm";
 import ItemDisplay from "./components/ItemDisplay";
 
-const Landing = () => {
+const ForageCatalogue = () => {
     return (
-        <section>
+        <section className="flex flex-col justify-center gap-10">
             <GameForm />
             <ItemDisplay />
         </section>
     );
 };
 
-export default Landing;
+export default ForageCatalogue;

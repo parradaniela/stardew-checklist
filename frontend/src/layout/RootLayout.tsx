@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 
 const RootLayout = () => {
     return (
-        <div className="flex flex-col min-h-screen justify-between">
+        <div className="flex min-h-screen flex-col justify-between">
             <header className="mx-auto max-w-7xl ">
                 <nav className="flex justify-center gap-10">
                     <h1>
