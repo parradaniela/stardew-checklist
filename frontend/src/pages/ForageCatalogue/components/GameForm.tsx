@@ -1,63 +1,45 @@
 import { useState } from "react";
+import RadioInput from "./RadioInput";
+import { gameRadioAttributes, seasonRadioAttributes } from "../../../data/formInputs";
 
 const GameForm = () => {
     const [formValues, setFormValues] = useState({
         game: "base",
         yearOne: false,
+        season: 'Spring'
     });
 
+    // This doesn't work now, need to fix when adding state management lib
     const handleFormChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.type === "checkbox") {
             setFormValues({
                 ...formValues,
                 [e.target.name]: e.target.checked,
             });
+            console.log(e.target.name, e.target.checked)
         } else {
             setFormValues({
                 ...formValues,
                 [e.target.name]: e.target.value,
             });
+            console.log(e.target.name, e.target.value)
         }
     };
 
     return (
         <form method="get">
             <fieldset className="flex justify-between gap-4">
-                <legend>Select a mod</legend>
-                <div>
-                    <label htmlFor="base-game">Base Game</label>
-                    <input
-                        type="radio"
-                        id="base"
-                        value="base"
-                        name="game"
-                        onChange={handleFormChange}
-                        defaultChecked
-                    />
-                </div>
-                <div>
-                    <label htmlFor="sve">Stardew Valley Expanded</label>
-                    <input
-                        type="radio"
-                        id="sve"
-                        value="sve"
-                        name="game"
-                        onChange={handleFormChange}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="rsv">Ridgeside Village</label>
-                    <input
-                        type="radio"
-                        id="rsv"
-                        value="rsv"
-                        name="game"
-                        onChange={handleFormChange}
-                    />
-                </div>
+                <legend>Select a game/mod</legend>
+                {
+                    gameRadioAttributes.map(attributes => {
+                        return (
+                            <RadioInput attributes={attributes} handleFormChange={handleFormChange} key={attributes.id} />
+                        )
+                    })
+                }
             </fieldset>
             <div>
-                <label htmlFor="year-one">Show year 1 available only</label>
+                <label htmlFor="yearOne">Show year 1 available only</label>
                 <input
                     type="checkbox"
                     id="yearOne"
@@ -65,6 +47,16 @@ const GameForm = () => {
                     onChange={handleFormChange}
                 />
             </div>
+            <fieldset>
+                <legend>Select a season</legend>
+                {
+                    seasonRadioAttributes.map(attributes => {
+                        return (
+                            <RadioInput attributes={attributes} handleFormChange={handleFormChange} key={attributes.id} />
+                        )
+                    })
+                }
+            </fieldset>
         </form>
     );
 };

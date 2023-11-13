@@ -1,11 +1,11 @@
 import GameForm from "./components/GameForm";
-import ItemDisplay from "./components/ItemDisplay";
+import FormResults from "./components/FormResults";
 
 const ForageCatalogue = () => {
     return (
         <section className="flex flex-col justify-center gap-10">
             <GameForm />
-            <ItemDisplay />
+            <FormResults />
         </section>
     );
 };

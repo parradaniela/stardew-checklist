@@ -1,6 +1,6 @@
 import * as Accordion from "@radix-ui/react-accordion";
 import { ChevronDownIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
-import { ForageObj } from "./ItemDisplay";
+import { ForageObj } from "../../../types/types";
 
 type Props = {
     itemObj: ForageObj;
