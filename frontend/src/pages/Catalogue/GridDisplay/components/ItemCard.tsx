@@ -10,9 +10,9 @@ const ItemCard = ({ itemObj }: Props) => {
     return (
         <li className="rounded-md border p-4">
             <div className="flex gap-2">
-                {/* <div>
+                <div>
                     <img src={imgUrl} alt={name} />
-                </div> */}
+                </div>
                 <h2>{name}</h2>
             </div>
             <div>
