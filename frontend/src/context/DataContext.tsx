@@ -11,7 +11,7 @@ const DataProvider = ({ children }: ContextChildren) => {
 
     // Setting the default data for the db
     useEffect(() => {
-        axios.get('https://localhost:3500/base/Spring')
+        axios.get('http://localhost:3500/forage/base/Spring')
             .then(response => {
                 setDbResponse(response.data)
             })
