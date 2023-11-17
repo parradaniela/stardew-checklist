@@ -1,12 +1,21 @@
-import { radioAttributeType } from "../../../data/formInputs";
+import { useContext } from "react";
+import { DataContext } from "../../../context/DataContext";
+import { radioAttributeType } from "../../../types/types";
 
 type Props = {
     attributes: radioAttributeType,
-    handleFormChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+    isChecked: boolean
 }
-const RadioInput = ({ attributes, handleFormChange }: Props) => {
+const RadioInput = ({ attributes, isChecked }: Props) => {
     const { label, name, id, value } = attributes;
+    const { formValues, setFormValues } = useContext(DataContext)
 
+    const handleRadioInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setFormValues({
+            ...formValues,
+            [e.target.name]: e.target.value
+        })
+    }
     return (
         <div>
             <label htmlFor={id}>{label}</label>
@@ -15,8 +24,8 @@ const RadioInput = ({ attributes, handleFormChange }: Props) => {
                 id={id}
                 value={value}
                 name={name}
-                onChange={handleFormChange}
-                defaultChecked
+                onChange={handleRadioInputChange}
+                defaultChecked={isChecked}
             />
         </div>
     )
