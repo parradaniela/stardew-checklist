@@ -1,13 +1,13 @@
-import GameForm from "./components/GameForm";
-import FormResults from "./components/FormResults";
 import DataProvider from "../../context/DataContext";
+import Form from "./Form/Form";
+import GridDisplay from "./GridDisplay/GridDisplay";
 
 const ForageCatalogue = () => {
     return (
         <section className="flex flex-col justify-center gap-10">
             <DataProvider>
-                <GameForm />
-                <FormResults />
+                <Form />
+                <GridDisplay />
             </DataProvider>
         </section>
     );
