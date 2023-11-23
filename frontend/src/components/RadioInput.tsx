@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { DataContext } from "../../../../context/DataContext";
-import { radioAttributeType } from "../../../../types/types";
+import { DataContext } from "../context/DataContext";
+import { radioAttributeType } from "../types/types";
 
 type Props = {
     attributes: radioAttributeType,
