@@ -1,6 +1,6 @@
 import DataProvider from "../../context/DataContext";
-import Form from "./Form/Form";
-import GridDisplay from "./GridDisplay/GridDisplay";
+import Form from "./components/Form";
+import GridDisplay from "./components/GridDisplay";
 
 const ForageCatalogue = () => {
     return (

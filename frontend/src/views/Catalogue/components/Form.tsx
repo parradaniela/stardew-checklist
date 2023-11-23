@@ -1,5 +1,6 @@
-import RadioInput from "./components/RadioInput";
-import Checkbox from "./components/Checkbox";
+
+import Checkbox from "../../../components/Checkbox";
+import RadioInput from "../../../components/RadioInput";
 import { gameRadioAttributes, seasonRadioAttributes } from "../../../data/formInputs";
 
 const Form = () => {

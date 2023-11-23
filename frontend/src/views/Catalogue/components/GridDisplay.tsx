@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import ItemCard from "./components/ItemCard";
+import ItemCard from "../../../components/ItemCard";
 import { DataContext } from "../../../context/DataContext";
 
 const GridDisplay = () => {
