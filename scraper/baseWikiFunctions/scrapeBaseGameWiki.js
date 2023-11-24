@@ -21,7 +21,7 @@ const scrapeBaseGameWiki = async page => {
 		console.log(`${id} table added to allForage.json`);
 	}
 	// The arguments "null" and "2" are for formatting the JSON output
-	await writeJsonFile('baseGameForage', allForage);
+	await writeJsonFile('baseGameForage.json', allForage);
 	console.log('Base game wiki scrape complete');
 };
 
