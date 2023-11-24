@@ -1,0 +1,660 @@
+[
+  {
+    "name": "Wild Horseradish",
+    "imgUrl": "/mediawiki/images/9/90/Wild_Horseradish.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Wild_Horseradish",
+    "locations": [
+      "Secret Woods (52%)",
+      "Cindersap Forest (50%)",
+      "Backwoods (42%)",
+      "Mountain (42%)",
+      "Forest Farm (25%)"
+    ],
+    "seasons": [
+      "Spring"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Daffodil",
+    "imgUrl": "/mediawiki/images/4/4b/Daffodil.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Daffodil",
+    "locations": [
+      "Pelican Town (100%)",
+      "Bus Stop (45%)",
+      "Railroad (45%)"
+    ],
+    "seasons": [
+      "Spring"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Leek",
+    "imgUrl": "/mediawiki/images/5/57/Leek.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Leek",
+    "locations": [
+      "Backwoods (58%)",
+      "Mountain (58%)",
+      "Forest Farm (25%)",
+      "Bus Stop (20%)",
+      "Railroad (20%)"
+    ],
+    "seasons": [
+      "Spring"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Dandelion",
+    "imgUrl": "/mediawiki/images/b/b1/Dandelion.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Dandelion",
+    "locations": [
+      "Cindersap Forest (50%)",
+      "Bus Stop (35%)",
+      "Railroad (35%)",
+      "Forest Farm (25%)"
+    ],
+    "seasons": [
+      "Spring"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Spring Onion",
+    "imgUrl": "/mediawiki/images/0/0c/Spring_Onion.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Spring_Onion",
+    "locations": [
+      "Cindersap Forest"
+    ],
+    "seasons": [
+      "Spring"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Morel",
+    "imgUrl": "/mediawiki/images/b/b1/Morel.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Morel",
+    "locations": [
+      "Secret Woods (32%)",
+      "Forest Farm (25%)",
+      "Farm Cave (Mushroom option)"
+    ],
+    "seasons": [
+      "Spring"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Common Mushroom",
+    "imgUrl": "/mediawiki/images/2/2e/Common_Mushroom.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Common_Mushroom",
+    "locations": [
+      "Secret Woods (16%)",
+      "Farm Cave (Mushroom option)"
+    ],
+    "seasons": [
+      "Spring"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Salmonberry",
+    "imgUrl": "/mediawiki/images/5/59/Salmonberry.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Salmonberry",
+    "locations": [
+      "On bushes during Salmonberry Season (Spring 15 - 18).",
+      "Farm Cave (Fruit Bat option)"
+    ],
+    "seasons": [
+      "Spring"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Grape",
+    "imgUrl": "/mediawiki/images/c/c2/Grape.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Grape",
+    "locations": [
+      "Backwoods (62%)",
+      "Mountain (62%)",
+      "Bus Stop (27%)",
+      "Railroad (27%)",
+      "Forest Farm (25%)"
+    ],
+    "seasons": [
+      "Summer"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Spice Berry",
+    "imgUrl": "/mediawiki/images/c/c6/Spice_Berry.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Spice_Berry",
+    "locations": [
+      "Cindersap Forest (40%)",
+      "Backwoods (38%)",
+      "Mountain (38%)",
+      "Bus Stop (27%)",
+      "Railroad (27%)",
+      "Forest Farm (25%)",
+      "Farm Cave (Fruit Bat option)"
+    ],
+    "seasons": [
+      "Summer"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Sweet Pea",
+    "imgUrl": "/mediawiki/images/d/d9/Sweet_Pea.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Sweet_Pea",
+    "locations": [
+      "Pelican Town (100%)",
+      "Cindersap Forest (60%)",
+      "Bus Stop (47%)",
+      "Railroad (47%)",
+      "Forest Farm (25%)"
+    ],
+    "seasons": [
+      "Summer"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Red Mushroom",
+    "imgUrl": "/mediawiki/images/e/e1/Red_Mushroom.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Red_Mushroom",
+    "locations": [
+      "Secret Woods (22%)",
+      "Farm Cave (Mushroom option)"
+    ],
+    "seasons": [
+      "Summer"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Fiddlehead Fern",
+    "imgUrl": "/mediawiki/images/4/48/Fiddlehead_Fern.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Fiddlehead_Fern",
+    "locations": [
+      "Secret Woods (78%)"
+    ],
+    "seasons": [
+      "Summer"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Common Mushroom",
+    "imgUrl": "/mediawiki/images/2/2e/Common_Mushroom.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Common_Mushroom",
+    "locations": [
+      "Forest Farm (25%)",
+      "Farm Cave (Mushroom option)"
+    ],
+    "seasons": [
+      "Summer"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Common Mushroom",
+    "imgUrl": "/mediawiki/images/2/2e/Common_Mushroom.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Common_Mushroom",
+    "locations": [
+      "Cindersap Forest (50%)",
+      "Secret Woods (46%)",
+      "Forest Farm (25%)",
+      "Mountain (24%)",
+      "Backwoods (24%)",
+      "Farm Cave (Mushroom option)"
+    ],
+    "seasons": [
+      "Fall"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Wild Plum",
+    "imgUrl": "/mediawiki/images/3/3b/Wild_Plum.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Wild_Plum",
+    "locations": [
+      "Bus Stop (60%)",
+      "Railroad (38%)",
+      "Backwoods (24%)",
+      "Mountain (24%)",
+      "Farm Cave (Fruit Bat option)"
+    ],
+    "seasons": [
+      "Fall"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Hazelnut",
+    "imgUrl": "/mediawiki/images/3/31/Hazelnut.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Hazelnut",
+    "locations": [
+      "Backwoods (53%)",
+      "Mountain (53%)",
+      "Bus Stop (40%)",
+      "Railroad (25%)",
+      "Shaking Maple Trees on or after Fall 14"
+    ],
+    "seasons": [
+      "Fall"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Blackberry",
+    "imgUrl": "/mediawiki/images/2/25/Blackberry.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Blackberry",
+    "locations": [
+      "Pelican Town (100%)",
+      "Cindersap Forest (50%)",
+      "Railroad (38%)",
+      "On bushes during Blackberry Season (Fall 8 - 11)",
+      "Farm Cave (Fruit Bat option)"
+    ],
+    "seasons": [
+      "Fall"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Chanterelle",
+    "imgUrl": "/mediawiki/images/1/1d/Chanterelle.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Chanterelle",
+    "locations": [
+      "Secret Woods (38%)",
+      "Forest Farm (25%)",
+      "Farm Cave (Mushroom option)"
+    ],
+    "seasons": [
+      "Fall"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Red Mushroom",
+    "imgUrl": "/mediawiki/images/e/e1/Red_Mushroom.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Red_Mushroom",
+    "locations": [
+      "Forest Farm (25%)",
+      "Secret Woods (15%)",
+      "Farm Cave (Mushroom option)"
+    ],
+    "seasons": [
+      "Fall"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Purple Mushroom",
+    "imgUrl": "/mediawiki/images/4/4b/Purple_Mushroom.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Purple_Mushroom",
+    "locations": [
+      "Forest Farm (25%)",
+      "Farm Cave (Mushroom option)"
+    ],
+    "seasons": [
+      "Fall"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Winter Root",
+    "imgUrl": "/mediawiki/images/1/11/Winter_Root.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Winter_Root",
+    "locations": [
+      "Tilling soil throughout Stardew Valley"
+    ],
+    "seasons": [
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Crystal Fruit",
+    "imgUrl": "/mediawiki/images/1/16/Crystal_Fruit.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Crystal_Fruit",
+    "locations": [
+      "Railroad (50%)",
+      "Cindersap Forest (39%)",
+      "Mountain (38%)",
+      "Bus Stop (23%)",
+      "Backwoods (22%)",
+      "Pelican Town (8%)"
+    ],
+    "seasons": [
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Snow Yam",
+    "imgUrl": "/mediawiki/images/3/3f/Snow_Yam.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Snow_Yam",
+    "locations": [
+      "Tilling soil throughout Stardew Valley"
+    ],
+    "seasons": [
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Crocus",
+    "imgUrl": "/mediawiki/images/2/2f/Crocus.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Crocus",
+    "locations": [
+      "Pelican Town (54%)",
+      "Railroad (50%)",
+      "Bus Stop (42%)",
+      "Mountain (40%)",
+      "Cindersap Forest (39%)",
+      "Backwoods (35%)"
+    ],
+    "seasons": [
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Holly",
+    "imgUrl": "/mediawiki/images/b/b8/Holly.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Holly",
+    "locations": [
+      "Secret Woods (100%)",
+      "Backwoods (43%)",
+      "Pelican Town (38%)",
+      "Bus Stop (35%)",
+      "Cindersap Forest (22%)",
+      "Mountain (22%)"
+    ],
+    "seasons": [
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Nautilus Shell",
+    "imgUrl": "/mediawiki/images/a/a4/Nautilus_Shell.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Nautilus_Shell",
+    "locations": [
+      "The Beach"
+    ],
+    "seasons": [
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Coral",
+    "imgUrl": "/mediawiki/images/b/b1/Coral.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Coral",
+    "locations": [
+      "The Beach"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Fall",
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Sea Urchin",
+    "imgUrl": "/mediawiki/images/e/e7/Sea_Urchin.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Sea_Urchin",
+    "locations": [
+      "The Beach"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Fall",
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Rainbow Shell",
+    "imgUrl": "/mediawiki/images/3/3d/Rainbow_Shell.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Rainbow_Shell",
+    "locations": [
+      "The Beach"
+    ],
+    "seasons": [
+      "Summer"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Clam",
+    "imgUrl": "/mediawiki/images/e/ed/Clam.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Clam",
+    "locations": [
+      "The Beach"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Fall",
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Cockle",
+    "imgUrl": "/mediawiki/images/a/ad/Cockle.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Cockle",
+    "locations": [
+      "The Beach"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Fall",
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Mussel",
+    "imgUrl": "/mediawiki/images/a/aa/Mussel.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Mussel",
+    "locations": [
+      "The Beach"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Fall",
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Oyster",
+    "imgUrl": "/mediawiki/images/5/54/Oyster.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Oyster",
+    "locations": [
+      "The Beach"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Fall",
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Seaweed",
+    "imgUrl": "/mediawiki/images/1/13/Seaweed.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Seaweed",
+    "locations": [
+      "The Beach"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Fall",
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Ginger",
+    "imgUrl": "/mediawiki/images/8/85/Ginger.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Ginger",
+    "locations": [
+      "Ginger Island"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Fall",
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Magma Cap",
+    "imgUrl": "/mediawiki/images/7/77/Magma_Cap.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Magma_Cap",
+    "locations": [
+      "Ginger Island"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Fall",
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Cactus Fruit",
+    "imgUrl": "/mediawiki/images/3/32/Cactus_Fruit.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Cactus_Fruit",
+    "locations": [
+      "The Desert"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Fall",
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Coconut",
+    "imgUrl": "/mediawiki/images/2/2f/Coconut.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Coconut",
+    "locations": [
+      "The Desert"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Fall",
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Red Mushroom",
+    "imgUrl": "/mediawiki/images/e/e1/Red_Mushroom.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Red_Mushroom",
+    "locations": [
+      "The Mines"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Fall",
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Purple Mushroom",
+    "imgUrl": "/mediawiki/images/4/4b/Purple_Mushroom.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Purple_Mushroom",
+    "locations": [
+      "The Mines"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Fall",
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  },
+  {
+    "name": "Cave Carrot",
+    "imgUrl": "/mediawiki/images/3/34/Cave_Carrot.png",
+    "wikiUrl": "https://stardewvalleywiki.com/Cave_Carrot",
+    "locations": [
+      "The Mines"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Fall",
+      "Winter"
+    ],
+    "yearOneAvail": true,
+    "game": "base"
+  }
+]
