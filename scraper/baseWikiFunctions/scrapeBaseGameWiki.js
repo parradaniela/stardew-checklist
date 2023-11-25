@@ -16,9 +16,8 @@ const scrapeBaseGameWiki = async page => {
 	let allForage = [];
 	for (const id of tableIDs) {
 		const forageTable = await getTableData(page, id);
-		console.log(`${id} forage scraped`);
 		allForage = allForage.concat(forageTable);
-		console.log(`${id} table added to allForage.json`);
+		console.log(`${id} forage scraped`);
 	}
 	// The arguments "null" and "2" are for formatting the JSON output
 	await writeJsonFile('baseGameForage.json', allForage);
