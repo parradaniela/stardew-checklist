@@ -1,3 +1,4 @@
+const downloadImg = require('../util/downloadImg');
 const writeJsonFile = require('../util/writeJsonFile');
 const getTableData = require('./getTableData');
 
@@ -21,6 +22,10 @@ const scrapeBaseGameWiki = async page => {
 	}
 	// The arguments "null" and "2" are for formatting the JSON output
 	await writeJsonFile('baseGameForage.json', allForage);
+	for (const forageObj of allForage) {
+		// console.log(forageObj);
+		await downloadImg(page, forageObj, 'https://stardewvalleywiki.com');
+	}
 	console.log('Base game wiki scrape complete');
 };
 

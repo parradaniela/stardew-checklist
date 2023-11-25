@@ -1,6 +1,7 @@
 const getForageData = require('./getForageData.js');
 const getForageItemUrls = require('./getForageItemUrls.js');
 const writeJsonFile = require('../util/writeJsonFile.js');
+const downloadImg = require('../util/downloadImg.js');
 
 const scrapeSveWiki = async page => {
 	try {
@@ -28,6 +29,9 @@ const scrapeSveWiki = async page => {
 			allForage.push(forageObj);
 		}
 		await writeJsonFile('sveForage.json', allForage);
+		for (const forageObj of allForage) {
+			await downloadImg(page, forageObj, '');
+		}
 		console.log('SVE Wiki scrape complete');
 	} catch (err) {
 		console.log('Error scraping the SVE Wiki', err);
