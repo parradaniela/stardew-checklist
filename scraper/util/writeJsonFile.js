@@ -1,4 +1,4 @@
-const fs = require('fs').promises; // Make sure to use the promises version of 'fs' for async/await
+const fs = require('fs').promises;
 const path = require('path');
 
 const writeJsonFile = async (fileName, jsonData) => {

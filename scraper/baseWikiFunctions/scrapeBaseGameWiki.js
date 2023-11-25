@@ -24,7 +24,7 @@ const scrapeBaseGameWiki = async page => {
 	await writeJsonFile('baseGameForage.json', allForage);
 	for (const forageObj of allForage) {
 		// console.log(forageObj);
-		await downloadImg(page, forageObj, 'https://stardewvalleywiki.com');
+		await downloadImg(page, forageObj);
 	}
 	console.log('Base game wiki scrape complete');
 };

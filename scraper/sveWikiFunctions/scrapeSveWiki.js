@@ -30,7 +30,7 @@ const scrapeSveWiki = async page => {
 		}
 		await writeJsonFile('sveForage.json', allForage);
 		for (const forageObj of allForage) {
-			await downloadImg(page, forageObj, '');
+			await downloadImg(page, forageObj);
 		}
 		console.log('SVE Wiki scrape complete');
 	} catch (err) {

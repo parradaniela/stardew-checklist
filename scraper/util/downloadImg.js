@@ -1,18 +1,22 @@
-const fs = require('fs').promises; // Make sure to use the promises version of 'fs' for async/await
+const fs = require('fs').promises;
 const path = require('path');
 
-const downloadImg = async (page, forageObj, domainUrl) => {
+const downloadImg = async (page, forageObj) => {
 	const { name, imgUrl, game } = forageObj;
-	console.log(imgUrl);
 	const directory = `images/${game}`;
 	const filePath = path.join(directory, `${name.replace(' ', '_')}.png`);
 
 	try {
+		let finalUrl;
+		if (game === 'base') {
+			finalUrl = `https://stardewvalleywiki.com${imgUrl}`;
+		} else {
+			finalUrl = imgUrl;
+		}
+		const imagePage = await page.goto(finalUrl);
 		// Check if the directory exists, create it if it doesn't
-		const imagePage = await page.goto(`${domainUrl}${imgUrl}`);
 		await fs.mkdir(directory, { recursive: true });
-
-		// Write the JSON data to a file in the specified directory
+		// Write the image file in the specified directory
 		await fs.writeFile(filePath, await imagePage.buffer());
 		console.log(`Image for ${name} downloaded to ${filePath}`);
 	} catch (err) {
