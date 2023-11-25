@@ -1,7 +1,6 @@
 const parseName = async page => {
 	try {
-		const name = await page.$eval('h1', heading => heading.innerText);
-		return name;
+		return await page.$eval('h1', heading => heading.innerText);
 	} catch (err) {
 		console.log('Error parsing name', err);
 	}
@@ -9,35 +8,34 @@ const parseName = async page => {
 
 const parseImage = async page => {
 	try {
-		const image = await page.$eval('.image-thumbnail', image =>
+		return await page.$eval('.image-thumbnail', image =>
 			image.getAttribute('href')
 		);
-		return image;
 	} catch (err) {
 		console.log('Error parsing image', err);
 	}
 };
 
 const parseLocations = async page => {
-	// Lots of work to do in cleaning this up and getting the right data
+	// Locations are not entered in a consistent structure on the wiki, some manual cleanup required
 	try {
-		const locations = await page.$$eval('[data-source="source"] a', anchors =>
-			anchors.map(location =>
-				location.innerText.trim().replace(/[^a-zA-Z, ]/g, '')
-			)
+		return await page.$$eval('[data-source="source"] a', anchors =>
+			anchors.map(location => location.innerText.replace(/[^a-zA-Z ]/g, '').trim())
 		);
-		return locations;
 	} catch (err) {
 		console.log('Error parsing locations', err);
 	}
 };
 
 const parseSeasons = async page => {
-	// Need to add more logic for when All Seasons appear, or when different locations have different seasons
+	// Seasons are not entered in a consistent structure on the wiki, some manual cleanup required
 	try {
 		const seasons = await page.$$eval('[data-source="season"] div', divs =>
-			divs.map(season => season.innerText.trim().replace(/[^a-zA-Z,]/g, ''))
+			divs.map(season => season.innerText.replace(/[^a-zA-Z ]/g, '').trim())
 		);
+		if (seasons.indexOf('All') !== -1 || seasons.indexOf('All Seasons') !== -1) {
+			return ['Spring', 'Summer', 'Fall', 'Winter'];
+		}
 		return seasons;
 	} catch (err) {
 		console.log('Error parsing seasons', err);
