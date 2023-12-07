@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { DataContext } from "../context/DataContext";
+import { DataContext } from "../context/FormContext";
 
 type Props = {
     labelText: string,

@@ -26,11 +26,9 @@ export type DbData = {
 export type Cache = {
     [key: string]: DbData[];
 };
-export interface AppDataContext {
+export interface FormValuesContext {
     formValues: InputFormData;
-    dbResponse: DbData[];
     setFormValues: Dispatch<SetStateAction<InputFormData>>;
-    setDbResponse: Dispatch<SetStateAction<DbData[]>>;
 }
 
 export type radioAttributeType = {
