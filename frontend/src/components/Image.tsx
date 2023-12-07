@@ -11,7 +11,6 @@ const Image = ({ imgId }: Props) => {
         }
     });
 
-    // const image = cld.image(imgId)
     return (
         <AdvancedImage cldImg={cld.image(imgId)} />
     )

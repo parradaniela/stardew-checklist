@@ -12,7 +12,7 @@ const ItemCard = ({ itemObj }: Props) => {
         <li className="rounded-md border p-4">
             <div className="flex gap-2">
                 <div>
-                    <Image imgId={'stardew-catalogue/Thistle'} />
+                    <Image imgId={imgUrl} />
                 </div>
                 <h2>{name}</h2>
             </div>
