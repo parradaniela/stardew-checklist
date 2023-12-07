@@ -1,3 +1,4 @@
+import Image from './Image';
 import * as Accordion from "@radix-ui/react-accordion";
 import { ChevronDownIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import { ForageObj } from "../types/types";
@@ -11,7 +12,7 @@ const ItemCard = ({ itemObj }: Props) => {
         <li className="rounded-md border p-4">
             <div className="flex gap-2">
                 <div>
-                    <img src={imgUrl} alt={name} />
+                    <Image imgId={'stardew-catalogue/Thistle'} />
                 </div>
                 <h2>{name}</h2>
             </div>
