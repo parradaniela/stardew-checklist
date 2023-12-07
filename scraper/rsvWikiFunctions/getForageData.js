@@ -15,6 +15,7 @@ const getForageData = async (row, i) => {
 		return {
 			name: name,
 			imgUrl: image,
+			imgId: `stardew-catalogue/${name}`.replace(/ /g, '_'),
 			wikiUrl: `https://ridgeside.fandom.com${url}`,
 			locations: locations,
 			seasons: seasons,

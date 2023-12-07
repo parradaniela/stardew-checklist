@@ -19,9 +19,9 @@ const scrapeRsvWiki = async page => {
 			}
 		}
 		writeJsonFile('rsvForage.json', allForage);
-		for (const forageObj of allForage) {
-			await downloadImg(page, forageObj);
-		}
+		// for (const forageObj of allForage) {
+		// 	await downloadImg(page, forageObj);
+		// }
 		console.log('RSV Wiki scrape complete');
 	} catch (err) {
 		console.log('Error scraping the RSV Wiki Foraging page: ', err);

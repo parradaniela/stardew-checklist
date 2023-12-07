@@ -9,8 +9,8 @@ const runScraper = async () => {
 		const browser = await puppeteer.launch({ headless: false });
 		const page = await browser.newPage();
 		await scrapeBaseGameWiki(page);
-		await scrapeSveWiki(page);
-		await scrapeRsvWiki(page);
+		// await scrapeSveWiki(page);
+		// await scrapeRsvWiki(page);
 		await browser.close();
 	} catch (err) {
 		console.log('Error running scraper: ', err);

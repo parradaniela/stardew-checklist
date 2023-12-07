@@ -4,7 +4,7 @@ const path = require('path');
 const downloadImg = async (page, forageObj) => {
 	const { name, imgUrl, game } = forageObj;
 	const directory = `images/${game}`;
-	const filePath = path.join(directory, `${name.replace(' ', '_')}.png`);
+	const filePath = path.join(directory, `${name.replace(/ /g, '_')}.png`);
 
 	try {
 		let finalUrl;

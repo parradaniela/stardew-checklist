@@ -22,10 +22,10 @@ const scrapeBaseGameWiki = async page => {
 	}
 	// The arguments "null" and "2" are for formatting the JSON output
 	await writeJsonFile('baseGameForage.json', allForage);
-	for (const forageObj of allForage) {
-		// console.log(forageObj);
-		await downloadImg(page, forageObj);
-	}
+	// for (const forageObj of allForage) {
+	// 	// console.log(forageObj);
+	// 	await downloadImg(page, forageObj);
+	// }
 	console.log('Base game wiki scrape complete');
 };
 

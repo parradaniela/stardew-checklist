@@ -7,7 +7,7 @@ const parseSeasons = async (row, tableID) => {
 			tableID === 'Fall' ||
 			tableID === 'Winter'
 		) {
-			return tableID;
+			return [tableID];
 		} else if (
 			tableID === 'The_Desert' ||
 			tableID === 'Ginger_Island' ||

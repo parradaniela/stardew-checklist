@@ -29,9 +29,9 @@ const scrapeSveWiki = async page => {
 			allForage.push(forageObj);
 		}
 		await writeJsonFile('sveForage.json', allForage);
-		for (const forageObj of allForage) {
-			await downloadImg(page, forageObj);
-		}
+		// for (const forageObj of allForage) {
+		// 	await downloadImg(page, forageObj);
+		// }
 		console.log('SVE Wiki scrape complete');
 	} catch (err) {
 		console.log('Error scraping the SVE Wiki', err);

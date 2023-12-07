@@ -11,14 +11,14 @@ const parseLocations = async (row, tableID) => {
 				const ulElement = td.querySelector('ul');
 				if (ulElement) {
 					const lis = Array.from(ulElement.querySelectorAll('li'));
-					return lis.map(li => li.textContent);
+					return lis.map(li => li.textContent.replace(/\(.*$/, '').trim());
 				} else {
-					return [td.innerText];
+					return [td.innerText.replace(/\(.*$/, '').trim()];
 				}
 			});
 			return fourthColumn;
 		} else {
-			return tableID.replace('_', ' ');
+			return [tableID.replace(/_/g, ' ')];
 		}
 	} catch (err) {
 		console.log('Error parsing locations: ', err);

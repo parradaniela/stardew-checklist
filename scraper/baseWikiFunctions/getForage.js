@@ -12,6 +12,7 @@ const getForage = async (row, tableID) => {
 		return {
 			name: name,
 			imgUrl: image,
+			imgId: `stardew-catalogue/${name}`.replace(/ /g, '_'),
 			wikiUrl: `https://stardewvalleywiki.com${url}`,
 			locations: locations,
 			seasons: seasons,

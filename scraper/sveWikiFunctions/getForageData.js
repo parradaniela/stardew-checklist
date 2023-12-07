@@ -18,6 +18,7 @@ const getForageData = async (page, url) => {
 		return {
 			name: name,
 			imgUrl: image,
+			imgId: `stardew-catalogue/${name}`.replace(/ /g, '_'),
 			wikiUrl: completeUrl,
 			locations: locations,
 			seasons: seasons,
