@@ -22,7 +22,7 @@ const parseSeasons = async (row, tableID) => {
 			seasons = fourthColumnText;
 		}
 		if (seasons === 'All') return ['Spring', 'Summer', 'Fall', 'Winter'];
-		return seasons;
+		return [seasons];
 	} catch (err) {
 		console.log('Error parsing seasons: ', err);
 	}
