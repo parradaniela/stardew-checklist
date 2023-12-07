@@ -1,25 +1,21 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import ItemCard from "../../../components/ItemCard";
-import { DataContext } from "../../../context/DataContext";
-import getRequest from "../../../utils/getRequest";
+import { FormContext } from "../../../context/FormContext";
+import { getForage } from "../../../api/getForage";
+import { useQuery } from "react-query";
 
 const GridDisplay = () => {
-    const { formValues, dbResponse, setDbResponse } = useContext(DataContext)
-    useEffect(() => {
-        getRequest(formValues)
-            .then(data => {
-                setDbResponse(data)
-            })
-            .catch(error => {
-                console.log("Error fetching update DB data", error)
-            })
-    }, [formValues, setDbResponse])
+    const { formValues } = useContext(FormContext)
 
+    const { isLoading, isError, error, data } = useQuery(['forage', formValues], getForage);
+
+    if (isLoading) return <p>Loading...</p>
+    if (isError) return <p>{`An error has occurred: ${error}`}</p>
     return (
         <div>
             <ul className='grid grid-cols-5 gap-2'>
                 {
-                    dbResponse.map(dbObject => {
+                    data?.map(dbObject => {
                         return (
                             <ItemCard key={dbObject.name} itemObj={dbObject} />
                         )

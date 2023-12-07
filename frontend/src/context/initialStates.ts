@@ -1,4 +1,4 @@
-import { InputFormData, DbData, AppDataContext } from "../types/types";
+import { InputFormData, FormValuesContext } from "../types/types";
 
 export const initialFormValues: InputFormData = {
     game: "base",
@@ -6,21 +6,7 @@ export const initialFormValues: InputFormData = {
     season: "Spring",
 };
 
-export const initialDbResponseValues: DbData[] = [
-    {
-        name: "",
-        imgUrl: "",
-        wikiUrl: "",
-        locations: [],
-        seasons: [],
-        yearOneAvail: false,
-        game: "",
-    },
-];
-
-export const initialContextState: AppDataContext = {
+export const initialContextState: FormValuesContext = {
     formValues: initialFormValues,
-    dbResponse: initialDbResponseValues,
     setFormValues: () => {},
-    setDbResponse: () => {},
 };
