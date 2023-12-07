@@ -9,6 +9,10 @@ const forageSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 	},
+	imgId: {
+		type: String,
+		required: true,
+	},
 	wikiUrl: {
 		type: String,
 		required: true,

@@ -2,7 +2,7 @@ import { Dispatch, ReactNode, SetStateAction } from "react";
 
 export type ForageObj = {
     name: string;
-    imgUrl: string;
+    imgId: string;
     wikiUrl: string;
     locations: string[];
 };
@@ -16,6 +16,7 @@ export type InputFormData = {
 export type DbData = {
     name: string;
     imgUrl: string;
+    imgId: string;
     wikiUrl: string;
     locations: string[];
     seasons: string[];

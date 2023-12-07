@@ -7,12 +7,12 @@ type Props = {
     itemObj: ForageObj;
 };
 const ItemCard = ({ itemObj }: Props) => {
-    const { name, imgUrl, wikiUrl, locations } = itemObj;
+    const { name, imgId, wikiUrl, locations } = itemObj;
     return (
         <li className="rounded-md border p-4">
             <div className="flex gap-2">
                 <div>
-                    <Image imgId={imgUrl} />
+                    <Image imgId={imgId} />
                 </div>
                 <h2>{name}</h2>
             </div>
