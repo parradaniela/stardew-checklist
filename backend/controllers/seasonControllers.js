@@ -18,7 +18,10 @@ const getAllForageInSeason = asyncHandler(async (req, res) => {
 //@access Public
 const getForageByGameAndSeason = asyncHandler(async (req, res) => {
 	const { game, season } = req.params;
-	const forage = await Forage.find({ game, seasons: season }).lean();
+	const forage = await Forage.find({ game, seasons: season })
+		.collation({ locale: 'en', strength: 2 })
+		.sort({ name: 1 })
+		.lean();
 	if (!forage?.length) {
 		return res
 			.status(400)

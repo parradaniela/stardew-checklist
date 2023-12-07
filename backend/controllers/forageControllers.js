@@ -5,7 +5,10 @@ const asyncHandler = require('express-async-handler');
 //@route GET /forage
 //@access Public
 const getAllForage = asyncHandler(async (req, res) => {
-	const forage = await Forage.find().lean();
+	const forage = await Forage.find()
+		.collation({ locale: 'en', strength: 2 })
+		.sort({ name: 1 })
+		.lean();
 	if (!forage?.length) {
 		return res.status(400).json({ message: 'No forage found' });
 	}
