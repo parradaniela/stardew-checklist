@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { DataContext } from "../context/FormContext";
+import { FormContext } from "../context/FormContext";
 
 type Props = {
     labelText: string,
@@ -7,7 +7,7 @@ type Props = {
 }
 
 const Checkbox = ({ labelText, id }: Props) => {
-    const { formValues, setFormValues } = useContext(DataContext);
+    const { formValues, setFormValues } = useContext(FormContext);
     const handleCheckboxInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormValues({
             ...formValues,

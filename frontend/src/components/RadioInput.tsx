@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { DataContext } from "../context/FormContext";
+import { FormContext } from "../context/FormContext";
 import { radioAttributeType } from "../types/types";
 
 type Props = {
@@ -8,7 +8,7 @@ type Props = {
 }
 const RadioInput = ({ attributes, isChecked }: Props) => {
     const { label, name, id, value } = attributes;
-    const { formValues, setFormValues } = useContext(DataContext)
+    const { formValues, setFormValues } = useContext(FormContext)
 
     const handleRadioInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormValues({
