@@ -17,8 +17,13 @@ const RadioInput = ({ attributes, isChecked }: Props) => {
         })
     }
     return (
-        <div>
-            <label htmlFor={id}>{label}</label>
+        <div className="flex justify-center gap-2">
+            <label
+                htmlFor={id}
+                className="text-2xl"
+            >
+                {label}
+            </label>
             <input
                 type="radio"
                 id={id}
@@ -26,6 +31,7 @@ const RadioInput = ({ attributes, isChecked }: Props) => {
                 name={name}
                 onChange={handleRadioInputChange}
                 defaultChecked={isChecked}
+                className="accent-stardew_dark_brown w-10 cursor-pointer"
             />
         </div>
     )

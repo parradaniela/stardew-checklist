@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .bg-custom-gradient {
+        background: linear-gradient(
+            180deg,
+            #02346a 5%,
+            #014385 25%,
+            #0459ae 38%,
+            #45baef 75%,
+            #5cd7e6 100%
+        );
+    }
+}
+
+@font-face {
+    font-family: "StardewFont";
+    src: url("./fonts/Stardew_Valley.ttf") format("trueType");
+    font-weight: normal;
+    font-style: normal;
+}

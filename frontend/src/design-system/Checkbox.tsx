@@ -15,13 +15,19 @@ const Checkbox = ({ labelText, id }: Props) => {
         });
     }
     return (
-        <div>
-            <label htmlFor={id}>{labelText}</label>
+        <div className="self-center flex justify-center gap-2">
+            <label
+                htmlFor={id}
+                className="text-2xl"
+            >
+                {labelText}
+            </label>
             <input
                 type="checkbox"
                 id={id}
                 name={id}
                 onChange={handleCheckboxInputChange}
+                className="accent-stardew_dark_brown w-12 cursor-pointer"
             />
         </div>
     )

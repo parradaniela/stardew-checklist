@@ -24,8 +24,8 @@ export type DbData = {
     game: string;
 };
 
-export type Cache = {
-    [key: string]: DbData[];
+export type TabStyles = {
+    [key: string]: string;
 };
 export interface FormValuesContext {
     formValues: InputFormData;

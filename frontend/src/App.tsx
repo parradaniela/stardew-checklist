@@ -3,7 +3,7 @@ import { router } from "./router/Router";
 
 const App = () => {
     return (
-        <div className=" bg-black text-white">
+        <div className="bg-custom-gradient">
             <RouterProvider router={router} />
         </div>
     );

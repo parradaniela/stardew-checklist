@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import ItemCard from "../../../components/ItemCard";
+import ItemCard from "../../../design-system/ItemCard";
 import { FormContext } from "../../../context/FormContext";
 import { getForage } from "../../../api/getForage";
 import { useQuery } from "react-query";

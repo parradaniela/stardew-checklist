@@ -5,8 +5,8 @@ import {
 } from "react-router-dom";
 // Page imports
 import RootLayout from "../layout/RootLayout";
-import Catalogue from "../views/Catalogue/Catalogue";
-import About from "../views/About";
+import Catalogue from "../features/Catalogue/Catalogue";
+import About from "../features/About/About";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
