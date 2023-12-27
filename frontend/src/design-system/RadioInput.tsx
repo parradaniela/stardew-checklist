@@ -20,7 +20,7 @@ const RadioInput = ({ attributes, isChecked }: Props) => {
         <div className="flex justify-center gap-2">
             <label
                 htmlFor={id}
-                className="text-2xl"
+                className="text-xl"
             >
                 {label}
             </label>

@@ -4,7 +4,7 @@ import GridDisplay from "./components/GridDisplay";
 
 const ForageCatalogue = () => {
     return (
-        <section className="flex flex-col justify-center">
+        <section className="flex flex-col justify-between gap-8">
             <FormProvider>
                 <Form />
                 <GridDisplay />

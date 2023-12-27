@@ -18,7 +18,7 @@ const Checkbox = ({ labelText, id }: Props) => {
         <div className="self-center flex justify-center gap-2">
             <label
                 htmlFor={id}
-                className="text-2xl"
+                className="text-xl"
             >
                 {labelText}
             </label>
@@ -27,7 +27,7 @@ const Checkbox = ({ labelText, id }: Props) => {
                 id={id}
                 name={id}
                 onChange={handleCheckboxInputChange}
-                className="accent-stardew_dark_brown w-12 cursor-pointer"
+                className="accent-stardew_dark_brown w-10 cursor-pointer"
             />
         </div>
     )

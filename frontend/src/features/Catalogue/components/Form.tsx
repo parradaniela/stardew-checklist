@@ -7,9 +7,9 @@ import RadioInputTab from "../../../design-system/RadioInputTab";
 const Form = () => {
 
     return (
-        <form method="get" className="flex flex-col gap-8 w-full bg-stardew_light_cream pt-10 px-6 pb-6 border-8 border-stardew_persian_orange">
-            <fieldset className="flex justify-center gap-8">
-                <legend className="font-stardew text-6xl text-stardew_dark_brown text-center mb-8">Select a game or mod</legend>
+        <form method="get" className="flex flex-col gap-4 w-full bg-stardew_light_cream pt-2 px-6 pb-2 border-8 border-stardew_persian_orange">
+            <fieldset className="flex justify-center gap-4">
+                <legend className="font-stardew text-6xl text-stardew_dark_brown text-center mb-2">Select a game or mod</legend>
                 {
                     gameRadioAttributes.map((attributes, i) => {
                         return (
@@ -17,10 +17,10 @@ const Form = () => {
                         )
                     })
                 }
+                <Checkbox id="yearOne" labelText="Show year 1 available only" />
             </fieldset>
-            <Checkbox id="yearOne" labelText="Show year 1 available only" />
             <fieldset className="flex justify-center items-center gap-2">
-                <legend className="font-stardew text-6xl text-stardew_dark_brown text-center mb-8">Select a season</legend>
+                <legend className="font-stardew text-6xl text-stardew_dark_brown text-center mb-2">Select a season</legend>
                 {
                     seasonRadioAttributes.map((attributes, i) => {
                         return (
