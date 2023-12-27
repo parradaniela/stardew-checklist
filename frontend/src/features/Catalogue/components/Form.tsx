@@ -7,7 +7,7 @@ import RadioInputTab from "../../../design-system/RadioInputTab";
 const Form = () => {
 
     return (
-        <form method="get" className="flex flex-col gap-8 w-full">
+        <form method="get" className="flex flex-col gap-8 w-full bg-stardew_light_cream pt-10 px-6 pb-6 border-8 border-stardew_persian_orange">
             <fieldset className="flex justify-center gap-8">
                 <legend className="font-stardew text-6xl text-stardew_dark_brown text-center mb-8">Select a game or mod</legend>
                 {

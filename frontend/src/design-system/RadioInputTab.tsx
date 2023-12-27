@@ -34,7 +34,7 @@ const RadioInput = ({ attributes, isChecked }: Props) => {
         <div className="flex justify-center items-stretch basis-1/4">
             <label
                 htmlFor={id}
-                className={`text-2xl font-bold text-center w-full py-8 border-8 transition-all cursor-pointer ${formValues.season === label ? checkedTabStyles[label as keyof TabStyles] : `bg-stardew_light_cream border-stardew_persian_orange ${tabStyles[label as keyof TabStyles]}`}`}
+                className={`font-bold text-4xl text-stardew_dark_brown text-center w-full py-8 border-8 transition-all cursor-pointer ${formValues.season === label ? `text-black ${checkedTabStyles[label as keyof TabStyles]}` : `bg-stardew_light_cream border-stardew_persian_orange hover:text-black ${tabStyles[label as keyof TabStyles]}`}`}
             >
                 {label}
             </label>
