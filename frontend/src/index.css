@@ -15,6 +15,10 @@
     }
 }
 
+h3[data-state="open"] > button > .chevron {
+    transform: rotate(180deg);
+}
+
 @font-face {
     font-family: "StardewFont";
     src: url("./fonts/Stardew_Valley.ttf") format("trueType");

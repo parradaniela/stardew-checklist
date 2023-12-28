@@ -13,7 +13,7 @@ const GridDisplay = () => {
     if (isError) return <p>{`An error has occurred: ${error}`}</p>
     return (
         <div>
-            <ul className='grid grid-cols-5 gap-2'>
+            <ul className='grid grid-cols-5 gap-2 bg-stardew_light_cream pt-2 px-6 pb-2 border-8 border-stardew_persian_orange'>
                 {
                     data?.map(dbObject => {
                         return (
