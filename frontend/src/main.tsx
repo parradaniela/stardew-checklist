@@ -5,7 +5,9 @@ import "./index.css";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 
-const queryClient = new QueryClient({ defaultOptions: { queries: { staleTime: 20000 } } });
+const queryClient = new QueryClient({
+    defaultOptions: { queries: { staleTime: 20000 } },
+});
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
