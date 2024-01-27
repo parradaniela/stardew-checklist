@@ -12,7 +12,7 @@ const ItemCard = ({ itemObj }: Props) => {
     const [chevronRotate, setChevronRotate] = useState(false);
 
     const handleChevronRotate = () => {
-        setChevronRotate(!chevronRotate);
+        setChevronRotate((prevChevronRotate) => !prevChevronRotate);
     };
     return (
         <li className="rounded-md border-4 border-stardew_persian_orange p-4">
