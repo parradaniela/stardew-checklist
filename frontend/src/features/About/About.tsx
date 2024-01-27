@@ -1,13 +1,7 @@
 const About = () => {
     return (
-        <div>
-            <p>
-                Credit to{" "}
-                <a href="https://www.reddit.com/r/StardewValley/comments/4dtgp7/by_popular_request_a_stardew_valley_font_for_your/">
-                    u/Cowsplay
-                </a>{" "}
-                for the Stardew Valley font
-            </p>
+        <div className="flex w-full flex-col gap-4 border-8 border-stardew_persian_orange bg-stardew_light_cream px-6 pb-2 pt-2">
+            <p>This page is still under construction!</p>
         </div>
     );
 };
