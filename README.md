@@ -10,7 +10,7 @@
     An easy to use visual catalogue for viewing forage items filtered by season in Stardew Valley. Includes items for the base game, Stardew Valley Expanded and Ridgeside Village.
 </div>
 
-![Stardew Valley Forage Catalogue Screenshot](image-1.png)
+![Stardew Valley Forage Catalogue Screenshot](image.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
