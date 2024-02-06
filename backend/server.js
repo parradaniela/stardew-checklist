@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3500;
 
 connectDB();
 app.use(logger);
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 app.use(express.json());
 //Can create a public folder to add css if wanted
 app.use('/', express.static(path.join(__dirname, '/public')));
@@ -34,7 +34,7 @@ app.use(errorHandler);
 
 mongoose.connection.once('open', () => {
 	console.log('Connected to MongoDB');
-	app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+	// app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 });
 
 mongoose.connection.on('error', err => {
