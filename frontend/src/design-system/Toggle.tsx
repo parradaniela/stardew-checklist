@@ -3,13 +3,13 @@ type Props = {
     id: string;
     greyout: boolean;
     setter: React.Dispatch<React.SetStateAction<boolean>>;
-}
+};
 const Toggle = ({ labelText, id, greyout, setter }: Props) => {
     const handleToggleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setter(e.target.checked)
-    }
+        setter(e.target.checked);
+    };
     return (
-        <div className="flex justify-center gap-2 self-center my-4">
+        <div className="my-2 flex justify-center gap-2 self-center md:my-4">
             <label htmlFor={id} className="text-xl">
                 {labelText}
             </label>
@@ -24,6 +24,6 @@ const Toggle = ({ labelText, id, greyout, setter }: Props) => {
             />
         </div>
     );
-}
+};
 
-export default Toggle
+export default Toggle;

@@ -31,10 +31,10 @@ const RadioInput = ({ attributes, isChecked }: Props) => {
     };
 
     return (
-        <div className="flex basis-1/4 items-stretch justify-center">
+        <div className="flex basis-full items-stretch justify-center sm:basis-[45%] lg:basis-1/4">
             <label
                 htmlFor={id}
-                className={`w-full cursor-pointer border-8 py-5 text-center text-3xl font-bold text-stardew_dark_brown transition-all ${
+                className={`w-full cursor-pointer border-8 py-4 text-center text-3xl font-bold text-stardew_dark_brown transition-all sm:py-5 ${
                     formValues.season === label
                         ? `text-black ${
                               checkedTabStyles[label as keyof TabStyles]
