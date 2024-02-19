@@ -1,8 +1,7 @@
 import axios from "axios";
 import { DbData, InputFormData } from "../types/types";
 
-const baseUrl = import.meta.env.VITE_SERVER_URL;
-// const baseUrl = import.meta.env.VITE_DEV_SERVER_URL;
+const baseUrl = import.meta.env.VITE_SERVER_URL || "http://localhost:3500";
 
 import { QueryFunctionContext } from "react-query";
 
