@@ -18,14 +18,14 @@ const GridDisplay = () => {
     if (isError) return <p>{`An error has occurred: ${error}`}</p>;
 
     return (
-        <section className=" border-8 border-stardew_persian_orange bg-stardew_light_cream px-6 pb-2 pt-2">
+        <section className=" border-8 border-stardew_persian_orange bg-stardew_light_cream px-3 md:px-6 py-1 md:py-2">
             <Toggle
                 labelText="Dim year-round items"
                 id="greyout"
                 greyout={greyout}
                 setter={setGreyout}
             />
-            <ul className="grid grid-cols-5 gap-2">
+            <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
                 {data?.map((dbObject) => {
                     return (
                         <ItemCard

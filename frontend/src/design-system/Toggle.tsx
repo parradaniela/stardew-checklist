@@ -9,7 +9,7 @@ const Toggle = ({ labelText, id, greyout, setter }: Props) => {
         setter(e.target.checked);
     };
     return (
-        <div className="my-4 flex justify-center gap-2 self-center">
+        <div className="my-2 md:my-4 flex justify-center gap-2 self-center">
             <label htmlFor={id} className="text-xl">
                 {labelText}
             </label>
