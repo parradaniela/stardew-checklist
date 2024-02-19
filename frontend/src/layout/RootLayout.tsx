@@ -5,17 +5,17 @@ const RootLayout = () => {
         <div className="mx-auto flex min-h-screen max-w-7xl flex-col gap-2 lg:gap-8">
             <header className="mt-2 lg:mt-8">
                 <nav className="flex w-full justify-center gap-2 lg:gap-10">
-                    <h1 className="flex justify-center items-center">
+                    <h1 className="flex items-center justify-center">
                         <a
                             href="/"
-                            className="border-8 border-stardew_persian_orange bg-stardew_light_cream p-6 font-stardew text-4xl md:text-4xl lg:text-6xl text-stardew_dark_brown "
+                            className="border-8 border-stardew_persian_orange bg-stardew_light_cream p-6 font-stardew text-4xl text-stardew_dark_brown md:text-4xl lg:text-6xl "
                         >
                             Stardew Valley Forage Catalogue
                         </a>
                     </h1>
                     <a
                         href="/about"
-                        className="flex justify-center items-center border-8 border-stardew_persian_orange bg-stardew_light_cream p-6 font-stardew text-3xl md:text-4xl lg:text-6xl text-stardew_dark_brown"
+                        className="flex items-center justify-center border-8 border-stardew_persian_orange bg-stardew_light_cream p-6 font-stardew text-3xl text-stardew_dark_brown md:text-4xl lg:text-6xl"
                     >
                         About
                     </a>
