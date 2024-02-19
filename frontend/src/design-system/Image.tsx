@@ -13,9 +13,9 @@ const Image = ({ imgId, greyscale }: Props) => {
         },
     });
 
-    const forageImg = cld.image(imgId)
+    const forageImg = cld.image(imgId);
     if (greyscale) {
-        forageImg.effect(grayscale())
+        forageImg.effect(grayscale());
     }
     return <AdvancedImage cldImg={forageImg} />;
 };

@@ -10,38 +10,56 @@ type Props = {
 };
 const ItemCard = ({ itemObj, greyout }: Props) => {
     const { name, imgId, wikiUrl, locations, seasons } = itemObj;
-    const [chevronRotate, setChevronRotate] = useState(false);
+    const [accordionToggle, setAccordionToggle] = useState(false);
 
-    const handleChevronRotate = () => {
-        setChevronRotate((prevChevronRotate) => !prevChevronRotate);
+    const handleAccordionToggle = () => {
+        setAccordionToggle((prevAccordionToggle) => !prevAccordionToggle);
     };
 
     return (
-        <li className={`rounded-md border-4 ${greyout && seasons.length === 4 ? "border-gray-500 bg-gray-400 opacity-90" : "border-stardew_persian_orange"} p-4`}>
+        <li
+            className={`rounded-md border-4 transition-all ${
+                greyout && seasons.length === 4
+                    ? "border-gray-500 bg-gray-400 opacity-90 focus-within:bg-gray-300 hover:bg-gray-300"
+                    : "border-stardew_persian_orange focus-within:bg-orange-100 hover:bg-orange-100"
+            } p-4`}
+        >
             <div>
                 <Accordion.Root type="single" collapsible>
                     <Accordion.Item value="item-1">
                         <Accordion.Header>
                             <Accordion.Trigger
                                 className="flex w-full flex-col justify-center gap-2"
-                                onClick={handleChevronRotate}
+                                onClick={handleAccordionToggle}
                             >
                                 <div className="flex items-center justify-between gap-4 pb-2">
                                     <div>
-                                        <Image imgId={imgId} greyscale={greyout && seasons.length === 4 ? true : false} />
+                                        <Image
+                                            imgId={imgId}
+                                            greyscale={
+                                                greyout && seasons.length === 4
+                                                    ? true
+                                                    : false
+                                            }
+                                        />
                                     </div>
                                     <h2 className="text-lg font-bold">
                                         {name}
                                     </h2>
                                 </div>
-                                <div className="self-center">
-                                    <span className="sr-only">
-                                        Click here to see more details
+                                <div className="flex flex-col items-center gap-1 self-center">
+                                    <span>
+                                        {`${
+                                            accordionToggle
+                                                ? "Close locations"
+                                                : "View locations"
+                                        }`}
                                     </span>
                                     <ChevronDownIcon
                                         aria-hidden
-                                        className={`scale-150 transition-all ${chevronRotate ? "rotate-180" : ""
-                                            }`}
+                                        className={`scale-150 transition-all ${
+                                            accordionToggle ? "rotate-180" : ""
+                                        }`}
                                     />
                                 </div>
                             </Accordion.Trigger>
@@ -57,7 +75,11 @@ const ItemCard = ({ itemObj, greyout }: Props) => {
                                     href={wikiUrl}
                                     target="_blank"
                                     rel="noreferrer noopener"
-                                    className={`group mt-4 flex items-center gap-2 border-4 ${greyout && seasons.length === 4 ? "border-gray-600 bg-gray-300" : "border-stardew_persian_orange bg-stardew_sunset"} p-2 transition-all hover:-translate-y-1`}
+                                    className={`group mt-4 flex items-center gap-2 border-4 ${
+                                        greyout && seasons.length === 4
+                                            ? "border-gray-600 bg-gray-400"
+                                            : "border-stardew_persian_orange bg-orange-200"
+                                    } p-2 transition-all hover:-translate-y-1`}
                                 >
                                     <span>View on the Wiki</span>
                                     <ExternalLinkIcon className="transition-all delay-100 group-hover:scale-150" />
