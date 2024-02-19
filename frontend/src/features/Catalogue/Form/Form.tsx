@@ -11,10 +11,7 @@ import Section from "../../../design-system/Section";
 const Form = () => {
     return (
         <Section>
-            <form
-                method="get"
-                className="flex w-full flex-col gap-4"
-            >
+            <form method="get" className="flex w-full flex-col gap-4">
                 <fieldset className="flex flex-wrap justify-center gap-4">
                     <legend className="mb-2 text-center font-stardew text-4xl text-stardew_dark_brown lg:text-6xl">
                         Select a game or mod

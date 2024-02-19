@@ -18,10 +18,11 @@ const ItemCard = ({ itemObj, greyout }: Props) => {
 
     return (
         <li
-            className={`rounded-md border-4 transition-all ${greyout && seasons.length === 4
-                ? "border-gray-500 bg-gray-400 opacity-90 focus-within:bg-gray-300 hover:bg-gray-300"
-                : "border-stardew_persian_orange focus-within:bg-orange-100 hover:bg-orange-100"
-                } p-4`}
+            className={`rounded-md border-4 transition-all ${
+                greyout && seasons.length === 4
+                    ? "border-gray-500 bg-gray-400 opacity-90 focus-within:bg-gray-300 hover:bg-gray-300"
+                    : "border-stardew_persian_orange focus-within:bg-orange-100 hover:bg-orange-100"
+            } p-4`}
         >
             <div>
                 <Accordion.Root type="single" collapsible>
@@ -48,15 +49,17 @@ const ItemCard = ({ itemObj, greyout }: Props) => {
                                 </div>
                                 <div className="flex flex-col items-center gap-1 self-center">
                                     <span>
-                                        {`${accordionToggle
-                                            ? "Close locations"
-                                            : "View locations"
-                                            }`}
+                                        {`${
+                                            accordionToggle
+                                                ? "Close locations"
+                                                : "View locations"
+                                        }`}
                                     </span>
                                     <ChevronDownIcon
                                         aria-hidden
-                                        className={`scale-150 transition-all ${accordionToggle ? "rotate-180" : ""
-                                            }`}
+                                        className={`scale-150 transition-all ${
+                                            accordionToggle ? "rotate-180" : ""
+                                        }`}
                                     />
                                 </div>
                             </Accordion.Trigger>
@@ -72,13 +75,14 @@ const ItemCard = ({ itemObj, greyout }: Props) => {
                                     href={wikiUrl}
                                     target="_blank"
                                     rel="noreferrer noopener"
-                                    className={`group mt-4 flex justify-center items-center gap-2 border-4 ${greyout && seasons.length === 4
-                                        ? "border-gray-600 bg-gray-400"
-                                        : "border-stardew_persian_orange bg-orange-200"
-                                        } p-2 transition-all hover:-translate-y-1`}
+                                    className={`group mt-4 flex items-center justify-center gap-2 border-4 ${
+                                        greyout && seasons.length === 4
+                                            ? "border-gray-600 bg-gray-400"
+                                            : "border-stardew_persian_orange bg-orange-200"
+                                    } p-2 transition-all hover:-translate-y-1`}
                                 >
                                     <span>View in Wiki</span>
-                                    <ExternalLinkIcon className="hidden sm:block transition-all delay-100 group-hover:scale-150" />
+                                    <ExternalLinkIcon className="hidden transition-all delay-100 group-hover:scale-150 sm:block" />
                                 </a>
                             </div>
                         </Accordion.Content>

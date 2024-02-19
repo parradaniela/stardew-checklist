@@ -6,7 +6,7 @@ import { useQuery } from "react-query";
 import ItemCard from "../../../design-system/ItemCard";
 import Toggle from "../../../design-system/Toggle";
 import Loading from "./Loading";
-import Error from './Error';
+import Error from "./Error";
 import Section from "../../../design-system/Section";
 
 const GridDisplay = () => {
@@ -18,7 +18,7 @@ const GridDisplay = () => {
         getForage,
     );
 
-    if (isLoading) return <Loading />
+    if (isLoading) return <Loading />;
     if (isError) return <Error error={error} />;
 
     return (
