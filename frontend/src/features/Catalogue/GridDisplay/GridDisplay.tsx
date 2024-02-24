@@ -13,7 +13,7 @@ import { DbData } from "../../../types/types";
 
 const GridDisplay = () => {
     const [greyout, setGreyout] = useState(false);
-    const [sorting, setSorting] = useState(false);
+    const [sortExclusive, setSortExclusive] = useState(false);
     const { formValues } = useContext(FormContext);
 
     const { isLoading, isError, error, data } = useQuery(
@@ -30,17 +30,17 @@ const GridDisplay = () => {
 
     return (
         <Section>
-            <div className="flex justify-center items-center">
+            <div className="flex flex-wrap gap-2 justify-center items-center md:gap-8">
                 <Toggle
                     labelText="Dim year-round items"
                     id="greyout"
                     greyout={greyout}
                     setter={setGreyout}
                 />
-                <Dropdown setter={setSorting} />
+                <Dropdown state={sortExclusive} setter={setSortExclusive} />
             </div>
-            <ul className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-5">
-                {sorting ?
+            <ul className="mt-4 grid grid-cols-2 gap-2 sm:mt-0 md:grid-cols-3 lg:grid-cols-5">
+                {sortExclusive ?
                     sortedData?.map((dbObject) => {
                         return (
                             <ItemCard

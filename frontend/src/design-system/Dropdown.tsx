@@ -1,10 +1,11 @@
 import React from 'react'
 
 type Props = {
+    state: boolean;
     setter: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Dropdown = ({ setter }: Props) => {
+const Dropdown = ({ state, setter }: Props) => {
     const handleOptionChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         if (e.target.value === "exclusive") {
             setter(true)
@@ -14,8 +15,14 @@ const Dropdown = ({ setter }: Props) => {
     }
     return (
         <div>
-            <label htmlFor="sort">Sort by: </label>
-            <select name="sorter" id="sort" onChange={handleOptionChange} defaultValue="alpha">
+            <label htmlFor="sort" className="text-xl">Sort by: </label>
+            <select
+                name="sort"
+                id="sort"
+                onChange={handleOptionChange}
+                defaultValue={state ? "exclusive" : "alpha"}
+                className='py-1 px-2 text-lg border-2 border-stardew_dark_brown rounded-md'
+            >
                 <option value="alpha">Alphabetical Only</option>
                 <option value="exclusive">Season-Exclusive First</option>
             </select>
