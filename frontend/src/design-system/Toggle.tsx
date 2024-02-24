@@ -20,7 +20,6 @@ const Toggle = ({ labelText, id, greyout, setter }: Props) => {
                 onChange={handleToggleChange}
                 className="w-10 cursor-pointer accent-stardew_dark_brown"
                 checked={greyout}
-                defaultChecked={false}
             />
         </div>
     );
