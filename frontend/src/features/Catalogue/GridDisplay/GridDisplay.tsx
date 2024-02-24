@@ -25,12 +25,12 @@ const GridDisplay = () => {
     if (isError) return <Error error={error} />;
 
     const sortedData = data?.toSorted((a: DbData, b: DbData) => {
-        return a.seasons.length - b.seasons.length
-    })
+        return a.seasons.length - b.seasons.length;
+    });
 
     return (
         <Section>
-            <div className="flex flex-wrap gap-2 justify-center items-center md:gap-8">
+            <div className="flex flex-wrap items-center justify-center gap-2 md:gap-8">
                 <Toggle
                     labelText="Dim year-round items"
                     id="greyout"
@@ -40,26 +40,25 @@ const GridDisplay = () => {
                 <Dropdown state={sortExclusive} setter={setSortExclusive} />
             </div>
             <ul className="mt-4 grid grid-cols-2 gap-2 sm:mt-0 md:grid-cols-3 lg:grid-cols-5">
-                {sortExclusive ?
-                    sortedData?.map((dbObject) => {
-                        return (
-                            <ItemCard
-                                key={dbObject.name}
-                                itemObj={dbObject}
-                                greyout={greyout}
-                            />
-                        );
-                    })
+                {sortExclusive
+                    ? sortedData?.map((dbObject) => {
+                          return (
+                              <ItemCard
+                                  key={dbObject.name}
+                                  itemObj={dbObject}
+                                  greyout={greyout}
+                              />
+                          );
+                      })
                     : data?.map((dbObject) => {
-                        return (
-                            <ItemCard
-                                key={dbObject.name}
-                                itemObj={dbObject}
-                                greyout={greyout}
-                            />
-                        );
-                    })
-                }
+                          return (
+                              <ItemCard
+                                  key={dbObject.name}
+                                  itemObj={dbObject}
+                                  greyout={greyout}
+                              />
+                          );
+                      })}
             </ul>
         </Section>
     );
