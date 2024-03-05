@@ -5,7 +5,7 @@ type Props = {
 };
 
 const Paragraph = ({ children }: Props) => {
-    return <p className="text-2xl">{children}</p>;
+    return <p className="text-xl mt-4">{children}</p>;
 };
 
 export default Paragraph;
