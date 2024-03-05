@@ -1,4 +1,5 @@
 import React from "react";
+import InputLabel from "./InputLabel";
 
 type Props = {
     state: boolean;
@@ -14,10 +15,8 @@ const Dropdown = ({ state, setter }: Props) => {
         }
     };
     return (
-        <div>
-            <label htmlFor="sort" className="text-xl">
-                Sort by:{" "}
-            </label>
+        <div className="my-2 flex items-center justify-center gap-2 self-center md:my-4">
+            <InputLabel id="sort" labelText="Sort by" />
             <select
                 name="sort"
                 id="sort"

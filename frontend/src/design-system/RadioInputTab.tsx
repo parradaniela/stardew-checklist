@@ -6,7 +6,7 @@ type Props = {
     attributes: radioAttributeType;
     isChecked: boolean;
 };
-const RadioInput = ({ attributes, isChecked }: Props) => {
+const RadioInputTab = ({ attributes, isChecked }: Props) => {
     const { label, name, id, value } = attributes;
     const { formValues, setFormValues } = useContext(FormContext);
 
@@ -59,4 +59,4 @@ const RadioInput = ({ attributes, isChecked }: Props) => {
     );
 };
 
-export default RadioInput;
+export default RadioInputTab;

@@ -4,12 +4,13 @@ import { getForage } from "../../../api/getForage";
 import { useQuery } from "react-query";
 // Component imports
 import ItemCard from "../../../design-system/ItemCard";
-import Toggle from "../../../design-system/Toggle";
 import Loading from "./Loading";
 import Error from "./Error";
 import Section from "../../../design-system/Section";
 import Dropdown from "../../../design-system/Dropdown";
 import { DbData } from "../../../types/types";
+import InputLabel from "../../../design-system/InputLabel";
+import Checkbox from "../../../design-system/Checkbox";
 
 const GridDisplay = () => {
     const [greyout, setGreyout] = useState(false);
@@ -31,12 +32,14 @@ const GridDisplay = () => {
     return (
         <Section>
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-8">
-                <Toggle
-                    labelText="Dim year-round items"
-                    id="greyout"
-                    greyout={greyout}
-                    setter={setGreyout}
-                />
+                <div className="my-2 flex justify-center gap-2 self-center md:my-4">
+                    <InputLabel id="greyout" labelText="Dim year-round items" />
+                    <Checkbox
+                        id="greyout"
+                        state={greyout}
+                        setter={setGreyout}
+                    />
+                </div>
                 <Dropdown state={sortExclusive} setter={setSortExclusive} />
             </div>
             <ul className="mt-4 grid grid-cols-2 gap-2 sm:mt-0 md:grid-cols-3 lg:grid-cols-5">

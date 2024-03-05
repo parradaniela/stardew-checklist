@@ -2,11 +2,9 @@ import {
     gameRadioAttributes,
     seasonRadioAttributes,
 } from "../../../data/formInputs";
-// Component imports
-// import Checkbox from "../../../design-system/Checkbox";
-import RadioInput from "../../../design-system/RadioInput";
 import RadioInputTab from "../../../design-system/RadioInputTab";
 import Section from "../../../design-system/Section";
+import FormInput from "./FormInput";
 
 const Form = () => {
     return (
@@ -17,13 +15,7 @@ const Form = () => {
                         Select a game or mod
                     </legend>
                     {gameRadioAttributes.map((attributes, i) => {
-                        return (
-                            <RadioInput
-                                attributes={attributes}
-                                isChecked={i === 0}
-                                key={attributes.id}
-                            />
-                        );
+                        return <FormInput attributes={attributes} i={i} />;
                     })}
                     {/* <Checkbox id="yearOne" labelText="Show year 1 available only" /> */}
                 </fieldset>

@@ -1,36 +1,21 @@
-import { useContext } from "react";
-import { FormContext } from "../context/FormContext";
-import { radioAttributeType } from "../types/types";
-
 type Props = {
-    attributes: radioAttributeType;
+    name: string;
+    id: string;
+    value: string;
+    handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     isChecked: boolean;
 };
-const RadioInput = ({ attributes, isChecked }: Props) => {
-    const { label, name, id, value } = attributes;
-    const { formValues, setFormValues } = useContext(FormContext);
-
-    const handleRadioInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setFormValues({
-            ...formValues,
-            [e.target.name]: e.target.value,
-        });
-    };
+const RadioInput = ({ name, id, value, handleChange, isChecked }: Props) => {
     return (
-        <div className="flex justify-center gap-2">
-            <label htmlFor={id} className="text-lg sm:text-xl">
-                {label}
-            </label>
-            <input
-                type="radio"
-                id={id}
-                value={value}
-                name={name}
-                onChange={handleRadioInputChange}
-                defaultChecked={isChecked}
-                className="w-10 cursor-pointer accent-stardew_dark_brown"
-            />
-        </div>
+        <input
+            type="radio"
+            id={id}
+            value={value}
+            name={name}
+            onChange={handleChange}
+            defaultChecked={isChecked}
+            className="w-10 cursor-pointer accent-stardew_dark_brown"
+        />
     );
 };
 
