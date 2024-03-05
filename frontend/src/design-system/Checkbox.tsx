@@ -2,7 +2,7 @@ type Props = {
     id: string;
     state: boolean;
     setter: React.Dispatch<React.SetStateAction<boolean>>;
-}
+};
 
 const Checkbox = ({ id, state, setter }: Props) => {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -18,6 +18,6 @@ const Checkbox = ({ id, state, setter }: Props) => {
             checked={state}
         />
     );
-}
+};
 
-export default Checkbox
+export default Checkbox;

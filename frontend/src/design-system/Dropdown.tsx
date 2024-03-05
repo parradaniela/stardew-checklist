@@ -15,7 +15,7 @@ const Dropdown = ({ state, setter }: Props) => {
         }
     };
     return (
-        <div className="my-2 flex justify-center items-center gap-2 self-center md:my-4">
+        <div className="my-2 flex items-center justify-center gap-2 self-center md:my-4">
             <InputLabel id="sort" labelText="Sort by" />
             <select
                 name="sort"

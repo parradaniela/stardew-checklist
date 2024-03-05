@@ -15,9 +15,7 @@ const Form = () => {
                         Select a game or mod
                     </legend>
                     {gameRadioAttributes.map((attributes, i) => {
-                        return (
-                            <FormInput attributes={attributes} i={i} />
-                        );
+                        return <FormInput attributes={attributes} i={i} />;
                     })}
                     {/* <Checkbox id="yearOne" labelText="Show year 1 available only" /> */}
                 </fieldset>

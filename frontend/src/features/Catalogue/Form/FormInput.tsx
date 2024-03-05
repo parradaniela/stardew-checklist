@@ -32,7 +32,7 @@ const FormInput = ({ attributes, i }: Props) => {
                 key={id}
             />
         </div>
-    )
-}
+    );
+};
 
-export default FormInput
+export default FormInput;

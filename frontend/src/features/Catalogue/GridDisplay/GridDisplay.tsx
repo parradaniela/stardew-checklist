@@ -34,30 +34,34 @@ const GridDisplay = () => {
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-8">
                 <div className="my-2 flex justify-center gap-2 self-center md:my-4">
                     <InputLabel id="greyout" labelText="Dim year-round items" />
-                    <Checkbox id="greyout" state={greyout} setter={setGreyout} />
+                    <Checkbox
+                        id="greyout"
+                        state={greyout}
+                        setter={setGreyout}
+                    />
                 </div>
                 <Dropdown state={sortExclusive} setter={setSortExclusive} />
             </div>
             <ul className="mt-4 grid grid-cols-2 gap-2 sm:mt-0 md:grid-cols-3 lg:grid-cols-5">
                 {sortExclusive
                     ? sortedData?.map((dbObject) => {
-                        return (
-                            <ItemCard
-                                key={dbObject.name}
-                                itemObj={dbObject}
-                                greyout={greyout}
-                            />
-                        );
-                    })
+                          return (
+                              <ItemCard
+                                  key={dbObject.name}
+                                  itemObj={dbObject}
+                                  greyout={greyout}
+                              />
+                          );
+                      })
                     : data?.map((dbObject) => {
-                        return (
-                            <ItemCard
-                                key={dbObject.name}
-                                itemObj={dbObject}
-                                greyout={greyout}
-                            />
-                        );
-                    })}
+                          return (
+                              <ItemCard
+                                  key={dbObject.name}
+                                  itemObj={dbObject}
+                                  greyout={greyout}
+                              />
+                          );
+                      })}
             </ul>
         </Section>
     );

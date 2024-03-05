@@ -16,7 +16,7 @@ const Image = ({ imgId, greyscale }: Props) => {
 
     const forageImg = cld.image(imgId);
 
-    forageImg.resize(scale().width(45))
+    forageImg.resize(scale().width(45));
 
     if (greyscale) {
         forageImg.effect(grayscale());
