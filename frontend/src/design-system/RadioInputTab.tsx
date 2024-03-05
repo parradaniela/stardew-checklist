@@ -6,7 +6,7 @@ type Props = {
     attributes: radioAttributeType;
     isChecked: boolean;
 };
-const RadioInput = ({ attributes, isChecked }: Props) => {
+const RadioInputTab = ({ attributes, isChecked }: Props) => {
     const { label, name, id, value } = attributes;
     const { formValues, setFormValues } = useContext(FormContext);
 
@@ -34,15 +34,12 @@ const RadioInput = ({ attributes, isChecked }: Props) => {
         <div className="flex basis-full items-stretch justify-center sm:basis-[45%] lg:basis-1/4">
             <label
                 htmlFor={id}
-                className={`w-full cursor-pointer border-8 py-4 text-center text-3xl font-bold text-stardew_dark_brown transition-all sm:py-5 ${
-                    formValues.season === label
-                        ? `text-black ${
-                              checkedTabStyles[label as keyof TabStyles]
-                          }`
-                        : `border-stardew_persian_orange bg-stardew_light_cream hover:text-black ${
-                              tabStyles[label as keyof TabStyles]
-                          }`
-                }`}
+                className={`w-full cursor-pointer border-8 py-4 text-center text-3xl font-bold text-stardew_dark_brown transition-all sm:py-5 ${formValues.season === label
+                        ? `text-black ${checkedTabStyles[label as keyof TabStyles]
+                        }`
+                        : `border-stardew_persian_orange bg-stardew_light_cream hover:text-black ${tabStyles[label as keyof TabStyles]
+                        }`
+                    }`}
             >
                 {label}
             </label>
@@ -59,4 +56,4 @@ const RadioInput = ({ attributes, isChecked }: Props) => {
     );
 };
 
-export default RadioInput;
+export default RadioInputTab;
