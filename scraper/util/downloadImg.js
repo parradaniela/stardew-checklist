@@ -1,9 +1,9 @@
 const fs = require('fs').promises;
 const path = require('path');
 
-const downloadImg = async (page, forageObj) => {
-	const { name, imgUrl, game } = forageObj;
-	const directory = `images/${game}`;
+const downloadImg = async (page, obj) => {
+	const { name, imgUrl, game } = obj;
+	const directory = `images/fish/${game}`;
 	const filePath = path.join(directory, `${name.replace(/ /g, '_')}.png`);
 
 	try {
