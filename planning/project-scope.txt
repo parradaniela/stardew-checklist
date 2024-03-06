@@ -34,3 +34,5 @@ Tech stack
 Deployment
 - Netlify for front end
 - Render for back end ?
+
+Interesting case for fish - Winter with Rain requires rain totem
