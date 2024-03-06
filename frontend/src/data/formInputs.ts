@@ -19,6 +19,12 @@ export const gameRadioAttributes: radioAttributeType[] = [
         id: "rsv",
         value: "rsv",
     },
+    {
+        label: "All",
+        name: "game",
+        id: "all",
+        value: "all",
+    },
 ];
 
 export const seasonRadioAttributes: radioAttributeType[] = [
